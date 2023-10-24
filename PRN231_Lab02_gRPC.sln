@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService", "GrpcService\GrpcService.csproj", "{3999C0EA-9DE0-490D-BF44-01A01B9DCEDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.BE", "1.BE", "{85D4225F-7A6B-4320-8067-184F49E594F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.FE", "2.FE", "{717705EB-C94C-4B10-AB8D-B68F7D6471E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{97F050DD-94B9-41CE-9C82-046D01BDBB2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3999C0EA-9DE0-490D-BF44-01A01B9DCEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3999C0EA-9DE0-490D-BF44-01A01B9DCEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3999C0EA-9DE0-490D-BF44-01A01B9DCEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3999C0EA-9DE0-490D-BF44-01A01B9DCEDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97F050DD-94B9-41CE-9C82-046D01BDBB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97F050DD-94B9-41CE-9C82-046D01BDBB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97F050DD-94B9-41CE-9C82-046D01BDBB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97F050DD-94B9-41CE-9C82-046D01BDBB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3999C0EA-9DE0-490D-BF44-01A01B9DCEDF} = {85D4225F-7A6B-4320-8067-184F49E594F7}
+		{97F050DD-94B9-41CE-9C82-046D01BDBB2C} = {717705EB-C94C-4B10-AB8D-B68F7D6471E3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04F43E5D-35ED-4CE8-A3E7-02666770563D}
+	EndGlobalSection
+EndGlobal

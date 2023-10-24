@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    MyProto.BookList data = ViewBag.Data;
+    MyProto.AuthorList AuthorData = ViewBag.AuthorData;
+}
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Version
+            </th>
+            <th>
+                Page
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+                Author
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in data.Book)
+        {
+            <tr>
+                <td>
+                    <div>@item.Id</div>
+                </td>
+                <td>
+                    <div>@item.Name</div>
+                </td>
+                <td>
+                    <div>@item.Version</div>
+                </td>
+                <td>
+                    <div>@item.Page</div>
+                </td>
+                <td>
+                    <div>@item.Price</div>
+                </td>
+                <td>
+                    <div>@item.Year</div>
+                </td>
+
+                <td>
+                    @{
+                        var author = AuthorData.Author.FirstOrDefault(a => a.AuthorId == item.AuthorId);
+                        string authorName = (author != null) ? author.AuthorName : "Not Found";
+                    }
+                    <p>Author: @authorName</p>
+                </td>
+
+                <td>
+                    <a asp-action="Update" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="GetBookById" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

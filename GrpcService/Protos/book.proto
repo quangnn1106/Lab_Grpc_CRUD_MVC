@@ -1,0 +1,64 @@
+﻿
+   syntax = "proto3";
+
+   option csharp_namespace = "MyProto"; // tu dinh nghia namespace de tach roi
+
+   service GrpcBook{
+	   rpc GetAll (Empty) returns (BookList);
+	   rpc GetBookById (IDRequest) returns (Book);
+	   rpc CreateBook(CreateBookRequest) returns (Book);
+		rpc UpdateBook(UpdateBookRequest) returns (Book);
+		 rpc DeleteBook(IDRequest) returns (Empty); // Define the DeleteBook method
+		  rpc GetAllAuthor (Empty) returns (AuthorList);
+   }
+
+   message Empty{}
+
+   message Book{
+	   int32 Id = 1;
+	   string Name = 2;
+	   int32 Version = 3;
+	   int32 Page = 4;
+	   int32 Price = 5;
+	   int32 Year = 6;
+	   int32 AuthorId = 7;
+   }
+
+      message Author{
+	   int32 AuthorId = 1;
+	   string AuthorName = 2;
+	   
+   }
+
+
+   message BookList{
+	   repeated Book book = 1;
+   }
+
+     message AuthorList{
+	   repeated Author author = 1;
+   }
+
+   message IDRequest{
+	   int32 Id = 1;
+   }
+   message CreateBookRequest {
+    string Name = 1;
+    int32 Version = 2;
+    int32 Page = 3;
+    int32 Price = 4;
+    int32 Year = 5;
+    int32 AuthorId = 6;
+	int32 Bid = 7;
+}
+
+message UpdateBookRequest {
+    int32 Id = 1;
+    string Name = 2;
+    int32 Version = 3;
+    int32 Page = 4;
+    int32 Price = 5;
+    int32 Year = 6;
+    int32 AuthorId = 7;
+}
+

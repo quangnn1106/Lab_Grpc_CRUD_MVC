@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    MyProto.AuthorList data = ViewBag.AuthorData;
+}
+
+
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+               Name
+            </th>
+          
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in data.Author)
+        {
+                <tr>
+                    <td>
+                        <div>@item.AuthorId</div>
+                    </td>
+                    <td>
+                        <div>@item.AuthorName</div>
+                    </td>
+                    
+                </tr>
+        }
+    </tbody>
+</table>
